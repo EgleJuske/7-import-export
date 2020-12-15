@@ -1,0 +1,16 @@
+import { dalyba } from './dalyba.js';
+import { suma } from './suma.js';
+
+function vidurkis(list) {
+    let totalSum = 0;
+    let count = list.length;
+
+    for (let i = 0; i < count; i++) {
+        const number = list[i];
+        totalSum = suma(totalSum, number);
+    }
+
+    return dalyba(totalSum, count);
+}
+
+export { vidurkis }
